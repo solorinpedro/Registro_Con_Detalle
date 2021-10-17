@@ -54,7 +54,7 @@
                 </Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                <DataGrid x:Name="DetalleDataGrid" Height="200" Width="366" ItemsSource="{Binding RolesDetalle.}">
+                <DataGrid x:Name="DetalleDataGrid" Height="200" Width="366" ItemsSource="{Binding RolesDetalle.}" SelectionChanged="DetalleDataGrid_SelectionChanged">
                 </DataGrid>
             </StackPanel>
 
