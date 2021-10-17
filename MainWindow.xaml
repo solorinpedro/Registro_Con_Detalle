@@ -8,6 +8,9 @@
         Title="Menu Principal" Height="350" Width="400">
     <Grid>
         <StackPanel Orientation="Vertical">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg"/>
+            </StackPanel.Background>
             <Menu Height="20">
                 <MenuItem Header="Registros">
                     <MenuItem x:Name="Roles" Header="Roles" Click="Roles_Click"/>
