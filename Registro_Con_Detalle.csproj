@@ -8,12 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg" />
     <None Remove="Resources\Agregar.png" />
     <None Remove="Resources\Buscar.png" />
     <None Remove="Resources\Eliminar.png" />
     <None Remove="Resources\Guardar.png" />
     <None Remove="Resources\Nuevo.png" />
+    <None Remove="UI\Registros\pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,7 +62,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg" />
+    <Resource Include="UI\Registros\pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg" />
   </ItemGroup>
 
   <ItemGroup>

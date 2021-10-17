@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="rRoles" Height="525" Width="425">
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="10">
+        <StackPanel Orientation="Vertical" Margin="10" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Rol ID"></Label>
@@ -28,7 +28,7 @@
                 <DatePicker Height="25" Width="200" Margin="40,0" Text="{Binding FechaCreacion}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                
+
                 <Label Content="Descripcion"></Label>
                 <TextBox x:Name="DescripcionTextBox" Height="25" Width="200" Margin="10,0" Text="{Binding Descripcion}"></TextBox>
             </StackPanel>
@@ -40,7 +40,9 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
                 <Label Content="Nombre"></Label>
-                <ComboBox x:Name="nombreComboBox" Height="25" Width="200" Margin="28,0" Text="{Binding Nombre}"></ComboBox>
+                <ComboBox x:Name="NombreComboBox" Height="25" Width="200" Margin="28,0" Text="{Binding Nombre}"></ComboBox>
+                <CheckBox x:Name="VecesAsignadoCheckBox" Content="Asignado" Margin="25,0" Height="18" IsChecked="{Binding VecesAsignado}"></CheckBox>
+
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -75,7 +77,7 @@
 
                 <Button x:Name="EliminarButton" Margin="0,0" Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resources/Eliminar.png" Height="20"></Image>
+                        <Image Source="/Resources/Eliminar.png" Height="20"></Image>
                         <Label Content="Eliminar"></Label>
                     </StackPanel>
                 </Button>
