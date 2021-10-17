@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Registro_Con_Detalle.UI.Registros"
         mc:Ignorable="d"
-        Title="rRoles" Height="525" Width="425">
+        Title="rRoles" Height="520" Width="450">
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="10" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <StackPanel Orientation="Vertical" Margin="10">
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Rol ID"></Label>
                 <TextBox x:Name="RolIDTextBox" Height="25" Width="100" Margin="40,0" Text="{Binding RoiID}"/>
-                <Button x:Name="BuscarButton" Margin="10,0" Click="BuscarButton_Click">
+                <Button x:Name="BuscarButton" Margin="0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Buscar.png" Height="20"></Image>
                         <Label Content="Buscar"></Label>
@@ -41,7 +41,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,5">
                 <Label Content="Nombre"></Label>
                 <ComboBox x:Name="NombreComboBox" Height="25" Width="200" Margin="28,0" Text="{Binding Nombre}"></ComboBox>
-                <CheckBox x:Name="VecesAsignadoCheckBox" Content="Asignado" Margin="25,0" Height="18" IsChecked="{Binding VecesAsignado}"></CheckBox>
+                <CheckBox x:Name="VecesAsignadoCheckBox" Content="Asignado" Margin="5,0" Height="18" IsChecked="{Binding VecesAsignado}"></CheckBox>
 
             </StackPanel>
 
