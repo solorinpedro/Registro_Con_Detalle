@@ -14,7 +14,6 @@ namespace Registro_Con_Detalle.Entidades
         public int RoiID { get; set; }
         public int PermisoID { get; set; }
         public bool EsAsignado { get; set; }
-        public int VecesAsignado { get; set; }
         public RolesDetalle(int RoiID, int PermisoID)
         {
             RolesDetalleID = 0;
