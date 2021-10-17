@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Registro_Con_Detalle.UI.Registros"
         mc:Ignorable="d"
-        Title="rRoles" Height="500" Width="425">
+        Title="rRoles" Height="525" Width="425">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
 
@@ -25,7 +25,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
                 <Label Content="Fecha"/>
-                <DatePickerTextBox  Height="25" Width="200" Margin="40,0" Text="{Binding FechaCreacion}"/>
+                <DatePicker Height="25" Width="200" Margin="40,0" Text="{Binding FechaCreacion}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,5">
                 
