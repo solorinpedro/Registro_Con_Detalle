@@ -26,17 +26,16 @@ namespace Registro_Con_Detalle.UI.Registros
         public rRoles()
         {
             InitializeComponent();
-            InitializeComponent();
             this.DataContext = role;
             RolIDTextBox.Text = "0";
 
             PermisoIDCombobox.ItemsSource = PermisosBLL.GetPermisos();
-            nombreComboBox.ItemsSource = PermisosBLL.GetPermisos();
+            NombreComboBox.ItemsSource = PermisosBLL.GetPermisos();
             DescripcionComBox.ItemsSource = PermisosBLL.GetPermisos();
 
             PermisoIDCombobox.SelectedValuePath = "PermisoID";
             PermisoIDCombobox.DisplayMemberPath = "PermisoID";
-            nombreComboBox.DisplayMemberPath = "Nombre";
+            NombreComboBox.DisplayMemberPath = "Nombre";
             DescripcionComBox.DisplayMemberPath = "Descripcion";
         }
         private void Limpiar()
