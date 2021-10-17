@@ -27,8 +27,8 @@ namespace Registro_Con_Detalle.BLL
             {
                 contexto.Dispose();
             }
-
             return lista;
         }
     }
 }
+

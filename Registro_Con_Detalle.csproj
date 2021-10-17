@@ -65,4 +65,10 @@
     <Resource Include="pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DATA\RegistroRolesDetalle.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

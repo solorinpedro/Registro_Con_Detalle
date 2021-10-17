@@ -41,8 +41,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,5">
                 <Label Content="Nombre"></Label>
                 <ComboBox x:Name="NombreComboBox" Height="25" Width="200" Margin="28,0" Text="{Binding Nombre}"></ComboBox>
-                <CheckBox x:Name="VecesAsignadoCheckBox" Content="Asignado" Margin="5,0" Height="18" IsChecked="{Binding VecesAsignado}"></CheckBox>
-
+              
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
