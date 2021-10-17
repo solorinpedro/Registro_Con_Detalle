@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Registro_Con_Detalle.UI.Registros"
         mc:Ignorable="d"
-        Title="rRoles" Height="520" Width="450">
+        Title="rRoles" Height="570" Width="450">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
 
@@ -41,8 +41,6 @@
             <StackPanel Orientation="Horizontal" Margin="0,5">
                 <Label Content="Nombre"></Label>
                 <ComboBox x:Name="NombreComboBox" Height="25" Width="200" Margin="28,0" Text="{Binding Nombre}"></ComboBox>
-                <CheckBox x:Name="AsignadoCheckBox" Content="Asignado" IsChecked="{Binding VecesAsignado}" Margin="0,5"/>
-
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -59,7 +57,14 @@
                 <DataGrid x:Name="DetalleDataGrid" Height="200" Width="366" ItemsSource="{Binding RolesDetalle.}">
                 </DataGrid>
             </StackPanel>
-
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Area Ciberseguridad"/>
+                <TextBlock x:Name="Permiso1TextBlock"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Administrador"/>
+                <TextBlock x:Name="Permiso2TextBlock"/>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <Button x:Name="NuevoButton" Click="NuevoButton_Click" Height="40">
                     <StackPanel Orientation="Horizontal">

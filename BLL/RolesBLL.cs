@@ -47,6 +47,10 @@ namespace Registro_Con_Detalle.BLL
 
             try
             {
+                foreach (var obj in roles.RolesDetalle)
+                {
+                    contexto.Permisos.Find(obj.PermisoID).VecesAsignado += 1;
+                }
                 contexto.Roles.Add(roles);
                 paso = contexto.SaveChanges() > 0;
             }
