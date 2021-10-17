@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Registro_Con_Detalle.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace Registro_Con_Detalle
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Roles_Click(object sender, RoutedEventArgs e)
+        {
+            rRoles roles = new rRoles();
+            roles.Show();
         }
     }
 }

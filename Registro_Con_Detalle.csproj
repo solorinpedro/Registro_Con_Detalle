@@ -23,10 +23,6 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="DAL\" />
-    <Folder Include="BLL\" />
-    <Folder Include="Entidades\" />
-    <Folder Include="UI\" />
   </ItemGroup>
 
   <ItemGroup>
