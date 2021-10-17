@@ -50,6 +50,18 @@ namespace Registro_Con_Detalle.UI.Registros
             this.DataContext = null;
             this.DataContext = role;
         }
+        private bool ValidarGuardar()
+        {
+            bool esValido = true;
+            if (DetalleDataGrid.Items.Count == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Ha ocurrido un error, Debe agregar roles", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return esValido;
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var Rol = RolesBLL.Buscar(Utilidades.ToInt(RolIDTextBox.Text));
@@ -82,18 +94,34 @@ namespace Registro_Con_Detalle.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            var paso = RolesBLL.Guardar(role);
-            if (paso)
-            {
-                role.Descripcion = DescripcionTextBox.Text;
 
-                Limpiar();
-                MessageBox.Show("Guardado con exito", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (!ValidarGuardar())
+                return;
+            bool paso = false;
+
+            if (role.RoiID == 0)
+            {
+                paso = RolesBLL.Guardar(role);
             }
             else
             {
-                MessageBox.Show("No se pudo guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                if (Existe())
+                {
+                    paso = RolesBLL.Guardar(role);
+                }
+                else
+                {
+                    MessageBox.Show("No existe en la base de datos", "ERROR");
+                }
             }
+
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Guardado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+                MessageBox.Show("Fallo al guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
@@ -108,6 +136,12 @@ namespace Registro_Con_Detalle.UI.Registros
             {
                 MessageBox.Show("No se ha podido Eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+        private bool Existe()
+        {
+            Roles esValido = RolesBLL.Buscar(role.RoiID);
+
+            return (esValido != null);
         }
 
         private void RemoverButton_Click(object sender, RoutedEventArgs e)

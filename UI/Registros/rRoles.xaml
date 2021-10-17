@@ -18,7 +18,7 @@
                         <Label Content="Buscar"></Label>
                     </StackPanel>
                 </Button>
-                <StackPanel Margin="80, 7">
+                <StackPanel Margin="25, 7">
                     <CheckBox x:Name="ActivoCheckBox" Content="Activo" IsChecked="{Binding esActivo}"/>
                 </StackPanel>
             </StackPanel>
@@ -73,7 +73,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="EliminarButton" Margin="15,0" Click="EliminarButton_Click">
+                <Button x:Name="EliminarButton" Margin="0,0" Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
                     <Image Source="/Resources/Eliminar.png" Height="20"></Image>
                         <Label Content="Eliminar"></Label>
